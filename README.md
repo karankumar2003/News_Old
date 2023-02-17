@@ -13,7 +13,7 @@ This is an Android app that displays news articles retrieved from the NewsData A
 * Clicking on a news article opens it in a custom chrome tab within the app using Chrome Custom Tabs  
 
 # Getting Started
-To use this app, simply clone the repository and open it in Android Studio. You can then run the app on an emulator or an Android device. The app will automatically detect the photos on your device and display them in the gallery.
+To use this app, simply clone the repository and open it in Android Studio. You can then run the app on an emulator or an Android device.  
 
 If you encounter any issues or have any questions, please feel free to open an issue on the repository.
 
