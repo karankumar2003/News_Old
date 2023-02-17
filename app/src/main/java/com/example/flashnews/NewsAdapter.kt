@@ -24,7 +24,8 @@ class NewsAdapter(list:List<News>,private val listener: RecyclerViewItemClickLis
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.textView.text = arrayList[position].Title
+        holder.titleTextView.text = arrayList[position].Title
+        holder.dateTextView.text = arrayList[position].date
         val imageUrl = arrayList[position].ImageUrl
         if (imageUrl != "null") {
             if (imageUrl.contains("youtube.com")) {
@@ -49,8 +50,9 @@ class NewsAdapter(list:List<News>,private val listener: RecyclerViewItemClickLis
 
 
     class MyViewHolder(itemView: View) : ViewHolder(itemView) {
-        val textView: TextView = itemView.findViewById(R.id.title)
+        val titleTextView: TextView = itemView.findViewById(R.id.title)
         val imageView: ImageView = itemView.findViewById(R.id.newsImage)
+        val dateTextView : TextView = itemView.findViewById(R.id.date)
     }
 
 }
