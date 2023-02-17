@@ -11,3 +11,13 @@ This is an Android app that displays news articles retrieved from the NewsData A
 * Display news articles in a RecyclerView  
 * Show a loading animation using Shimmer effect while the news articles are being fetched  
 * Clicking on a news article opens it in a custom chrome tab within the app using Chrome Custom Tabs  
+
+# Getting Started
+To use this app, simply clone the repository and open it in Android Studio. You can then run the app on an emulator or an Android device. The app will automatically detect the photos on your device and display them in the gallery.
+
+If you encounter any issues or have any questions, please feel free to open an issue on the repository.
+
+# Conclusion
+In conclusion, Flash News is a useful and efficient app that allows users to read news articles from the NewsData API. By leveraging technologies like Volley, Glide, and Chrome Custom Tabs, the app is able to provide a smooth and seamless experience for users. The inclusion of the Shimmer effect adds an element of style to the app and provides visual feedback to the user while data is being fetched.  
+
+The app can be easily installed and used on any Android device, making it a convenient way for users to stay up-to-date with the latest news. Overall, the Android News App is a well-designed and practical app that showcases the power and flexibility of modern mobile app development.
