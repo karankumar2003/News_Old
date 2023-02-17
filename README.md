@@ -3,11 +3,11 @@ This is an Android app that displays news articles retrieved from the NewsData A
 
 # Technologies Used
 * Kotlin: The programming language used for the app development.  
-*Volley: A networking library that makes it easy to handle HTTP requests and responses.  
-*Glide: A fast and efficient image loading library that makes it easy to load and display images from URLs.  
-*Shimmer effect: A library created by Facebook that provides a shimmering effect to indicate loading while data is being fetched.   
-*Chrome Custom Tabs: A feature provided by Google Chrome that allows an app to show a customized version of Chrome to display web content.  
+* Volley: A networking library that makes it easy to handle HTTP requests and responses.  
+* Glide: A fast and efficient image loading library that makes it easy to load and display images from URLs.  
+* Shimmer effect: A library created by Facebook that provides a shimmering effect to indicate loading while data is being fetched.   
+* Chrome Custom Tabs: A feature provided by Google Chrome that allows an app to show a customized version of Chrome to display web content.  
 # Features
-*Display news articles in a RecyclerView  
-*Show a loading animation using Shimmer effect while the news articles are being fetched  
-*Clicking on a news article opens it in a custom chrome tab within the app using Chrome Custom Tabs  
+* Display news articles in a RecyclerView  
+* Show a loading animation using Shimmer effect while the news articles are being fetched  
+* Clicking on a news article opens it in a custom chrome tab within the app using Chrome Custom Tabs  
