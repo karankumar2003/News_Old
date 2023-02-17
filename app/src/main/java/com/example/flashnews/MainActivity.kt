@@ -5,18 +5,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.format.DateUtils
 import android.util.Log
-import android.widget.TextView
-import android.widget.Toast
+import android.view.View
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.android.volley.Request
 import com.android.volley.toolbox.JsonObjectRequest
-import com.android.volley.toolbox.JsonRequest
-import com.android.volley.toolbox.Volley
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.news_card.*
-import org.json.JSONObject
+import com.facebook.shimmer.ShimmerFrameLayout
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
@@ -24,13 +19,19 @@ import kotlin.collections.ArrayList
 class MainActivity : AppCompatActivity(),RecyclerViewItemClickListener {
     val arrayList = ArrayList<News>()
     lateinit var newsAdapter : NewsAdapter
+    lateinit var  recyclerView: RecyclerView
+    lateinit var shimmerFrameLayout :ShimmerFrameLayout
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        shimmerFrameLayout = findViewById(R.id.shimmer)
+        shimmerFrameLayout.startShimmer()
 
-        val recyclerView = findViewById<RecyclerView>(R.id.RecyclerView)
+
+        recyclerView = findViewById(R.id.RecyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
          newsAdapter = NewsAdapter(arrayList,this)
@@ -76,6 +77,9 @@ class MainActivity : AppCompatActivity(),RecyclerViewItemClickListener {
                     arrayList.add(news)
 
                 }
+                shimmerFrameLayout.stopShimmer()
+                shimmerFrameLayout.visibility=View.GONE
+                recyclerView.visibility = View.VISIBLE
                 newsAdapter.notifyDataSetChanged()
             },{
                 val statusCode = it.networkResponse?.statusCode

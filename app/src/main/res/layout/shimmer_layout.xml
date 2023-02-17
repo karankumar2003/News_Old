@@ -9,47 +9,45 @@
     android:paddingBottom= "16dp">
 
     <TextView
-        android:id="@+id/title"
-        android:textStyle="bold"
-        android:textSize="22sp"
+        android:id="@+id/titletitle"
+        android:background="@color/shimmer"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        tools:text="This is the heading"
+        android:layout_height="100dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:maxLines="3"
-        android:ellipsize="end"/>
+        />
     <LinearLayout
 
+        android:id="@id/linearlayoutlinearlayout"
         android:paddingTop="16dp"
         android:paddingBottom="16dp"
-        android:id="@id/linearlayoutlinearlayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintTop_toBottomOf="@id/titletitle"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:orientation="horizontal">
 
         <TextView
+            android:background="@color/shimmer"
             android:id="@+id/descdesc"
             android:textStyle="italic"
             android:layout_gravity="center"
             android:paddingEnd="8dp"
             android:textSize="16sp"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             tools:text="this is the description of the news . it contains the some lines about the article we can read without opening the article."
             app:layout_constraintEnd_toStartOf="@+id/newsImagenewsImage"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView"
             android:layout_weight="1"
-            android:maxLines="6"
-            android:ellipsize="end"/>
+            android:layout_marginEnd="16dp"
+            />
 
         <ImageView
-            tools:src = "@drawable/no_image"
+            android:background="@color/shimmer"
             android:id="@+id/newsImagenewsImage"
             android:layout_gravity="center"
             android:layout_width="0dp"
@@ -62,6 +60,7 @@
     </LinearLayout>
 
     <TextView
+        android:background="@color/shimmer"
         android:id="@+id/sourcesource"
         android:layout_width="0dp"
         android:layout_height="18dp"
@@ -72,6 +71,8 @@
 
         />
     <TextView
+        android:layout_marginTop="8dp"
+        android:background="@color/shimmer"
         android:id="@+id/datedate"
         android:layout_width="0dp"
         android:layout_height="18dp"
@@ -81,10 +82,10 @@
         app:layout_constraintTop_toBottomOf="@+id/sourcesource"
         />
     <View
+        android:background="@color/shimmer"
         android:layout_marginTop="16dp"
         android:layout_width="0dp"
         android:layout_height="1dp"
-        android:background="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/datedate"/>

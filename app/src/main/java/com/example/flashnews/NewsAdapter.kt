@@ -1,17 +1,13 @@
 package com.example.flashnews
 
-import android.content.Context
-import android.text.Layout
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.bumptech.glide.Glide
-import kotlinx.android.synthetic.main.news_card.view.*
 
 class NewsAdapter(list:List<News>,private val listener: RecyclerViewItemClickListener): RecyclerView.Adapter<NewsAdapter.MyViewHolder>() {
 
@@ -60,10 +56,10 @@ class NewsAdapter(list:List<News>,private val listener: RecyclerViewItemClickLis
 
     class MyViewHolder(itemView: View) : ViewHolder(itemView) {
         val titleTextView: TextView = itemView.findViewById(R.id.title)
-        val imageView: ImageView = itemView.findViewById(R.id.newsImage)
-        val dateTextView : TextView = itemView.findViewById(R.id.date)
-        val descriptionTextView :TextView = itemView.findViewById(R.id.desc)
-        val sourceTextView :TextView = itemView.findViewById(R.id.source)
+        val imageView: ImageView = itemView.findViewById(R.id.newsImagenewsImage)
+        val dateTextView : TextView = itemView.findViewById(R.id.datedate)
+        val descriptionTextView :TextView = itemView.findViewById(R.id.descdesc)
+        val sourceTextView :TextView = itemView.findViewById(R.id.sourcesource)
     }
 
 }
