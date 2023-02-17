@@ -11,6 +11,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.bumptech.glide.Glide
+import kotlinx.android.synthetic.main.news_card.view.*
 
 class NewsAdapter(list:List<News>,private val listener: RecyclerViewItemClickListener): RecyclerView.Adapter<NewsAdapter.MyViewHolder>() {
 
@@ -26,6 +27,14 @@ class NewsAdapter(list:List<News>,private val listener: RecyclerViewItemClickLis
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder.titleTextView.text = arrayList[position].Title
         holder.dateTextView.text = arrayList[position].date
+        holder.sourceTextView.text = arrayList[position].source
+        var description = arrayList[position].description
+        if (description== "null"){
+            description = "No description available, tap to read news in detail."
+
+        }
+        holder.descriptionTextView.text = description
+
         val imageUrl = arrayList[position].ImageUrl
         if (imageUrl != "null") {
             if (imageUrl.contains("youtube.com")) {
@@ -53,6 +62,8 @@ class NewsAdapter(list:List<News>,private val listener: RecyclerViewItemClickLis
         val titleTextView: TextView = itemView.findViewById(R.id.title)
         val imageView: ImageView = itemView.findViewById(R.id.newsImage)
         val dateTextView : TextView = itemView.findViewById(R.id.date)
+        val descriptionTextView :TextView = itemView.findViewById(R.id.desc)
+        val sourceTextView :TextView = itemView.findViewById(R.id.source)
     }
 
 }

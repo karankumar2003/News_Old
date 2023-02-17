@@ -69,7 +69,9 @@ class MainActivity : AppCompatActivity(),RecyclerViewItemClickListener {
                    newsJsonObject.getString("title"),
                         newsJsonObject.getString("image_url"),
                     newsJsonObject.getString("link"),
-                    dateToDisplay
+                    dateToDisplay,
+                        newsJsonObject.getString("description"),
+                        newsJsonObject.getString("source_id")
                     )
                     arrayList.add(news)
 
