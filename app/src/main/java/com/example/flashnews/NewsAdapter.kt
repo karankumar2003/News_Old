@@ -12,13 +12,14 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.bumptech.glide.Glide
 
-class NewsAdapter(list:List<News>): RecyclerView.Adapter<NewsAdapter.MyViewHolder>() {
+class NewsAdapter(list:List<News>,private val listener: RecyclerViewItemClickListener): RecyclerView.Adapter<NewsAdapter.MyViewHolder>() {
 
     private val arrayList: List<News> = list
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.news_card,parent,false)
-        val viewHolder =  MyViewHolder(view)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.news_card, parent, false)
+        val viewHolder = MyViewHolder(view)
+        view.setOnClickListener { listener.onItemClick(viewHolder.adapterPosition) }
         return viewHolder
     }
 
@@ -36,13 +37,12 @@ class NewsAdapter(list:List<News>): RecyclerView.Adapter<NewsAdapter.MyViewHolde
 
                 Glide.with(holder.itemView.context).load(imageUrl).into(holder.imageView)
             }
-        }
-                else{
-                    Glide.with(holder.itemView.context).load(R.drawable.no_image)
-                        .into(holder.imageView)
+        } else {
+            Glide.with(holder.itemView.context).load(R.drawable.no_image)
+                .into(holder.imageView)
 
-                }
-            }
+        }
+    }
 
 
     override fun getItemCount(): Int = arrayList.size
@@ -50,6 +50,7 @@ class NewsAdapter(list:List<News>): RecyclerView.Adapter<NewsAdapter.MyViewHolde
 
     class MyViewHolder(itemView: View) : ViewHolder(itemView) {
         val textView: TextView = itemView.findViewById(R.id.title)
-        val imageView : ImageView = itemView.findViewById(R.id.newsImage)
+        val imageView: ImageView = itemView.findViewById(R.id.newsImage)
     }
+
 }
