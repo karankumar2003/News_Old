@@ -56,10 +56,10 @@ class NewsAdapter(list:List<News>,private val listener: RecyclerViewItemClickLis
 
     class MyViewHolder(itemView: View) : ViewHolder(itemView) {
         val titleTextView: TextView = itemView.findViewById(R.id.title)
-        val imageView: ImageView = itemView.findViewById(R.id.newsImagenewsImage)
-        val dateTextView : TextView = itemView.findViewById(R.id.datedate)
-        val descriptionTextView :TextView = itemView.findViewById(R.id.descdesc)
-        val sourceTextView :TextView = itemView.findViewById(R.id.sourcesource)
+        val imageView: ImageView = itemView.findViewById(R.id.newsImage)
+        val dateTextView : TextView = itemView.findViewById(R.id.date)
+        val descriptionTextView :TextView = itemView.findViewById(R.id.desc)
+        val sourceTextView :TextView = itemView.findViewById(R.id.source)
     }
 
 }
