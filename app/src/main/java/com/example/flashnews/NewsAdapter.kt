@@ -1,7 +1,9 @@
 package com.example.flashnews
 
+import android.opengl.Visibility
 import android.view.LayoutInflater
 import android.view.View
+import android.view.View.GONE
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
@@ -44,8 +46,7 @@ class NewsAdapter(list:List<News>,private val listener: RecyclerViewItemClickLis
                 Glide.with(holder.itemView.context).load(imageUrl).into(holder.imageView)
             }
         } else {
-            Glide.with(holder.itemView.context).load(R.drawable.no_image)
-                .into(holder.imageView)
+           holder.imageView.visibility = View.GONE
 
         }
     }

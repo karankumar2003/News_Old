@@ -64,9 +64,9 @@
             android:ellipsize="end"/>
 
         <ImageView
-            tools:src = "@drawable/no_image"
+            tools:src = "@drawable/ic_launcher_background"
             android:id="@+id/newsImage"
-            android:layout_gravity="center"
+            android:scaleType="centerCrop"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="118dp"
