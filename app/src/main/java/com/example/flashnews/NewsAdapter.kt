@@ -1,9 +1,7 @@
 package com.example.flashnews
 
-import android.opengl.Visibility
 import android.view.LayoutInflater
 import android.view.View
-import android.view.View.GONE
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
@@ -11,7 +9,8 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.bumptech.glide.Glide
 
-class NewsAdapter(list:List<News>,private val listener: RecyclerViewItemClickListener): RecyclerView.Adapter<NewsAdapter.MyViewHolder>() {
+class NewsAdapter(list: List<News>, private val listener: RecyclerViewItemClickListener) :
+    RecyclerView.Adapter<NewsAdapter.MyViewHolder>() {
 
     private val arrayList: List<News> = list
 
@@ -27,7 +26,7 @@ class NewsAdapter(list:List<News>,private val listener: RecyclerViewItemClickLis
         holder.dateTextView.text = arrayList[position].date
         holder.sourceTextView.text = arrayList[position].source
         var description = arrayList[position].description
-        if (description== "null"){
+        if (description == "null") {
             description = "No description available, tap to read news in detail."
 
         }
@@ -46,7 +45,7 @@ class NewsAdapter(list:List<News>,private val listener: RecyclerViewItemClickLis
                 Glide.with(holder.itemView.context).load(imageUrl).into(holder.imageView)
             }
         } else {
-           holder.imageView.visibility = View.GONE
+            holder.imageView.visibility = View.GONE
 
         }
     }
@@ -58,9 +57,9 @@ class NewsAdapter(list:List<News>,private val listener: RecyclerViewItemClickLis
     class MyViewHolder(itemView: View) : ViewHolder(itemView) {
         val titleTextView: TextView = itemView.findViewById(R.id.title)
         val imageView: ImageView = itemView.findViewById(R.id.newsImage)
-        val dateTextView : TextView = itemView.findViewById(R.id.date)
-        val descriptionTextView :TextView = itemView.findViewById(R.id.desc)
-        val sourceTextView :TextView = itemView.findViewById(R.id.source)
+        val dateTextView: TextView = itemView.findViewById(R.id.date)
+        val descriptionTextView: TextView = itemView.findViewById(R.id.desc)
+        val sourceTextView: TextView = itemView.findViewById(R.id.source)
     }
 
 }
