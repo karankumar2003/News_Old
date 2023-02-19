@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:id="@+id/constraintLayout">
 
 
     <com.facebook.shimmer.ShimmerFrameLayout
@@ -26,6 +27,28 @@
         </LinearLayout>
 
     </com.facebook.shimmer.ShimmerFrameLayout>
+    <TextView
+        android:id="@+id/InternetStatusTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:textStyle="italic"
+        android:textColor="@color/dark_blue"
+        app:layout_constraintTop_toTopOf="@id/constraintLayout"
+        app:layout_constraintLeft_toLeftOf="@id/constraintLayout"
+        app:layout_constraintRight_toRightOf="@id/constraintLayout"
+        app:layout_constraintBottom_toBottomOf="@id/constraintLayout"
+        android:visibility="gone"/>
+    <Button
+        android:id="@+id/ReloadButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/InternetStatusTextView"
+        app:layout_constraintLeft_toLeftOf="@id/constraintLayout"
+        app:layout_constraintRight_toRightOf="@id/constraintLayout"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        android:text="Reload"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/RecyclerView"

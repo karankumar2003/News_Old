@@ -19,8 +19,7 @@ class MySingleton constructor(context: Context) {
     }
 
     private val requestQueue: RequestQueue by lazy {
-        // applicationContext is key, it keeps you from leaking the
-        // Activity or BroadcastReceiver if someone passes one in.
+
         Volley.newRequestQueue(context.applicationContext)
     }
 
